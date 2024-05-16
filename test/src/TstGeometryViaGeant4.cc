@@ -756,7 +756,9 @@ void* TstGeometryViaGeant4::TestNewSolid()
   G4VPhysicalVolume* world
     = new G4PVPlacement(0, CLHEP::Hep3Vector(), 
                         worldV, worldV->GetName(), 0, false, 0); 
-  worldV->SetVisAttributes (G4VisAttributes::Invisible);
+  //worldV->SetVisAttributes (G4VisAttributes::Invisible);
+  worldV->SetVisAttributes (G4VisAttributes::GetInvisible());
+
       
   G4VSolid* solid = CreateNewSolid();
   G4LogicalVolume* solidV = CreateVolume(solid);
@@ -776,7 +778,9 @@ void* TstGeometryViaGeant4::TestNewSolid2()
   G4VPhysicalVolume* world
     = new G4PVPlacement(0, CLHEP::Hep3Vector(), 
                         worldV, worldV->GetName(), 0, false, 0); 
-  worldV->SetVisAttributes (G4VisAttributes::Invisible);
+  //worldV->SetVisAttributes (G4VisAttributes::Invisible);
+  worldV->SetVisAttributes (G4VisAttributes::GetInvisible());
+
       
   std::cerr << "TstGeometryViaGeant4::TestNewSolid2: not yet implemented." 
             << std::endl;

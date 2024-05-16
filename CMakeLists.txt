@@ -13,6 +13,9 @@
 # of the CMake configuration files kindly provided 
 # by Florian Uhlig, GSI and Pere Mato, CERN.
 
+# Require C++17 in all targets
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #---  Enforce an out-of-source builds before anything else ---------------------
 if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
     message(STATUS "VGM requires an out-of-source build.")
